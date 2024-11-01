@@ -1,0 +1,231 @@
+/* The Modal */
+
+.maileroo {
+  position: relative;
+}
+
+.maileroo-logo {
+  height: 24px;
+}
+
+.promo-p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.maileroo-modal .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content */
+.maileroo-modal .modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 450px;
+}
+
+.modal-body {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#test-result {
+  max-width: 450px;
+}
+
+.button.button-primary {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--project-orange-primary-normal, #f46a25);
+  color: var(--project-orange-primary-light-6, #fef8f5);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  border: 1px solid transparent;
+}
+.button.button-primary:focus {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #f46a25;
+}
+.button.button-primary:hover,
+.button.button-primary:active,
+.button.button-primary:focus {
+  background: var(--project-orange-primary-light-2, #f68b55);
+  border: 1px solid transparent;
+}
+
+.button.button-outline {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--Project-Natural-Light-3, #e9e4e2);
+  color: var(--Project-Natural-Normal, #8c7b73);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+/* Your plugin-specific styles */
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.custom-switch input {
+  display: none;
+}
+
+.custom-switch label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-switch input:checked + label {
+  background-color: #f46a25; /* Change this color to your desired "ON" state color */
+}
+
+.custom-switch label:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.custom-switch input:checked + label:before {
+  transform: translateX(16px);
+}
+
+input[type='radio']:checked::before {
+  background-color: #f46a25; /* Change this color to your desired "ON" state color */
+}
+
+input[type='radio']:focus {
+  border-color: #f46a25;
+  box-shadow: 0 0 0 1px #f46a25;
+}
+
+.success {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-left-width: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  margin: 5px 15px 2px;
+  padding: 1px 12px;
+  border-left-color: #23a719;
+  margin: 5px 0 15px;
+}
+
+/* Add this to your CSS file */
+
+.loading-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.loading {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f46a25;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.display-none {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: none;
+}
+
+#toast {
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+#toast.success {
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+}
+
+#toast .icon {
+  margin-right: 10px;
+}
+
